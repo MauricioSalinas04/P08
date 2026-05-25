@@ -16,8 +16,10 @@ def main() -> None:
     config = DetectorConfig(
         canny_low=20.0,
         canny_high=60.0,
-        max_edge_points=4000,
-        max_ellipses=10,
+        max_edge_points=4000,   # 327x186 → ~5700 bordes; submuestreo a 4000
+        max_ellipses=15,        # ~12-14 elipses visibles en data/image.png
+        aht_radius=200.0,       # semiejes exteriores llegan a ~163px; 200 da margen
+        # delta_x / delta_y: auto-escalado por densidad (~30px para esta imagen)
     )
 
     print(f"Imagen: {image.shape[1]}x{image.shape[0]} px")
