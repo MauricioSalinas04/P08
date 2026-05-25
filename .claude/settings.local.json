@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(gh repo *)",
+      "Bash(python -c ' *)",
+      "Bash(pip install *)",
+      "WebFetch(domain:github.com)",
+      "WebFetch(domain:raw.githubusercontent.com)",
+      "Bash(New-Item -ItemType Directory -Force -Path \"C:\\\\Users\\\\nicol\\\\.claude\\\\skills\\\\yuen-ellipse-hough\\\\chapters\")",
+      "Bash(Out-Null)",
+      "Bash(Write-Output \"OK\")",
+      "Bash(mkdir -p \"/mnt/c/Users/nicol/.claude/skills/yuen-ellipse-hough/chapters\" 2>&1 && echo \"OK\")",
+      "PowerShell(git clone https://github.com/virgiliojr94/book-to-skill.git \"C:\\\\Users\\\\nicol\\\\OneDrive\\\\Documentos\\\\Facultad\\\\Noveno Smestre\\\\Lab Vision\\\\P08-ELIPSES\\\\.book-to-skill-tool\")",
+      "PowerShell(Get-ChildItem -Path \"C:\\\\Users\\\\nicol\\\\OneDrive\\\\Documentos\\\\Facultad\\\\Noveno Smestre\\\\Lab Vision\\\\P08-ELIPSES\" -Recurse -Force | Select-Object -Property FullName, @{Name='Type';Expression={if\\($_.PSIsContainer\\){'[DIR]'} else {'[FILE]'}}}, @{Name='Size';Expression={if\\($_.PSIsContainer\\){'-'} else {$_.Length}}} | Sort-Object FullName | Format-Table -AutoSize -Wrap)",
+      "Skill(yuen-ellipse-hough)",
+      "Skill(yuen-ellipse-hough:*)"
+    ]
+  }
+}

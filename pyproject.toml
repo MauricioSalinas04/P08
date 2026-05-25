@@ -1,0 +1,39 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "ellipse_detector"
+version = "0.1.0"
+requires-python = ">=3.11"
+dependencies = [
+    "numpy>=1.26",
+    "scipy>=1.12",
+    "Pillow>=10.0",
+    "matplotlib>=3.8",
+]
+
+[project.scripts]
+ellipse-detect = "ellipse_detector.cli:main"
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=8",
+    "mypy>=1.8",
+    "black>=24",
+]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["ellipse_detector*"]
+
+[tool.mypy]
+strict = true
+python_version = "3.11"
+
+[tool.black]
+line-length = 100
+target-version = ["py311"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
